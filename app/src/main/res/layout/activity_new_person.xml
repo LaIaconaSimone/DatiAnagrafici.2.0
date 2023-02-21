@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPerson">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="AGGIUNGI PERSONA" />
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignBaseline="@+id/nomeIns"
+        android:layout_alignParentStart="true"
+        android:text="Nome" />
+
+    <EditText
+        android:id="@+id/nomeIns"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/title"
+        android:layout_alignParentEnd="true"
+        android:hint="Inserisci il tuo nome"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/cognome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nomeIns"
+        android:layout_alignBaseline="@+id/cognomeIns"
+        android:layout_alignParentStart="true"
+        android:text="Cognome" />
+
+    <EditText
+        android:id="@+id/cognomeIns"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/nomeIns"
+        android:layout_alignParentEnd="true"
+        android:hint="Inserisci il tuo cognome"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cognomeIns"
+        android:layout_alignBaseline="@+id/dataIns"
+        android:layout_alignParentStart="true"
+        android:text="Data" />
+
+    <EditText
+        android:id="@+id/dataIns"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/cognomeIns"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:hint="Data Di Nascita"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/sesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataIns"
+        android:layout_alignBaseline="@+id/radioGroup"
+        android:layout_alignParentStart="true"
+        android:text="Sesso" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/dataIns"
+        android:layout_alignParentEnd="true"
+        android:orientation='horizontal'>
+
+        <RadioButton
+            android:id="@+id/radioMaschio"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:text="Maschio" />
+
+        <RadioButton
+            android:id="@+id/radioFemmina"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Femmina" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/comune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sesso"
+        android:layout_alignBaseline="@+id/comuneIns"
+        android:layout_alignParentStart="true"
+        android:text="Citta di nascita" />
+
+    <EditText
+        android:id="@+id/comuneIns"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:hint="Comune di nascita"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/provincia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comune"
+        android:layout_alignBaseline="@+id/provinciaIns"
+        android:layout_alignParentStart="true"
+        android:text="Provincia di nascita" />
+
+    <EditText
+        android:id="@+id/provinciaIns"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/comuneIns"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:hint="Provincia di nascita"
+        android:inputType="text" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/provinciaIns"
+        android:layout_centerInParent="true"
+        android:text="Salva persona" />
+
+</RelativeLayout>
